@@ -9,45 +9,45 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/services.css">
   <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
   <div id="header"></div>
 
-  <main class="page-content">
+  <main class="page-content svc-page">
 
-    <section class="page-banner fade-up">
+    <section class="svc-hero">
       <div class="container">
-        <h1 class="page-banner__title">Our Services</h1>
-        <p class="page-banner__subtitle">Consulting, advisory, and training solutions</p>
+        <h1 class="svc-hero__title">Services</h1>
+        <span class="svc-hero__rule" aria-hidden="true"></span>
       </div>
     </section>
 
-    <section id="advisory" class="fade-up">
+    <section id="advisory" class="svc-overview fade-up" aria-labelledby="svc-overview-heading">
       <div class="container">
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="service-card h-100 p-4 bg-light rounded">
-              <h2 class="h5 section-title">Consulting</h2>
-              <p class="text-secondary mb-0">Strategic consulting services placeholder.</p>
-            </div>
+        <p class="svc-overview__eyebrow" id="svc-overview-heading">
+          <span class="svc-overview__eyebrow-line" aria-hidden="true"></span>
+          Services Overview
+          <span class="svc-overview__eyebrow-line" aria-hidden="true"></span>
+        </p>
+        <p class="svc-overview__subtitle">Explore our core service categories</p>
+
+        <div class="svc-tabs" id="svcTabs" role="tablist" aria-label="Service categories"></div>
+
+        <div class="svc-panel">
+          <div class="svc-panel__side">
+            <ul class="svc-sublist" id="svcList" role="tablist" aria-label="Sub-services" aria-orientation="vertical"></ul>
+            <a href="contact.html" class="svc-panel__cta">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 9h16M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              Schedule a Consultation
+            </a>
           </div>
-          <div class="col-md-4">
-            <div class="service-card h-100 p-4 bg-light rounded">
-              <h2 class="h5 section-title">Advisory</h2>
-              <p class="text-secondary mb-0">Expert advisory services placeholder.</p>
-            </div>
-          </div>
-          <div class="col-md-4" id="training">
-            <div class="service-card h-100 p-4 bg-light rounded">
-              <h2 class="h5 section-title">Training</h2>
-              <p class="text-secondary mb-0">Webinars and masterclasses placeholder.</p>
-            </div>
-          </div>
+          <div class="svc-panel__content" id="svcDetail" role="tabpanel" aria-live="polite"></div>
         </div>
       </div>
     </section>
@@ -60,5 +60,7 @@
   <script src="js/partials.js"></script>
   <script src="js/include.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/services-data.js"></script>
+  <script src="js/services.js"></script>
 </body>
 </html>
