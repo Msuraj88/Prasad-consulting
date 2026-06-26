@@ -1,0 +1,255 @@
+/* ==========================================================================
+   Prasad Consulting — Global Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variables (CSS custom properties)
+   -------------------------------------------------------------------------- */
+:root {
+  --maroon: #8b2252;
+  --maroon-dark: #70163f;
+  --maroon-light: #a32d66;
+  --header-bg: #f2ece4;
+  --header-divider: #d8d0c8;
+  --text-dark: #2a2a2a;
+  --text-muted: #6b6b6b;
+  --dark: #1a1a1a;
+  --header-radius: 18px;
+  --header-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --transition: 0.3s ease;
+  --container-max-width: 1440px;
+  --section-padding-y: 60px;
+
+  /* Typography — font families */
+  --font-family-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-family-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  /* Typography — section label / eyebrow */
+  --type-label-size: 11px;
+  --type-label-weight: 600;
+  --type-label-line-height: 1;
+  --type-label-letter-spacing: 0.12em;
+
+  /* Typography — section title (H2) */
+  --type-title-size: clamp(2rem, 3.2vw, 2.625rem);
+  --type-title-weight: 600;
+  --type-title-line-height: 1.12;
+  --type-title-letter-spacing: -0.01em;
+
+  /* Typography — section description / lead */
+  --type-description-size: 15px;
+  --type-description-weight: 400;
+  --type-description-line-height: 1.65;
+
+  /* Typography — card / grid item title */
+  --type-card-title-size: 16px;
+  --type-card-title-weight: 700;
+  --type-card-title-line-height: 1.35;
+
+  /* Typography — card / grid item description */
+  --type-card-description-size: 14px;
+  --type-card-description-weight: 400;
+  --type-card-description-line-height: 1.5;
+
+  /* Typography — body paragraph */
+  --type-body-size: 16px;
+  --type-body-weight: 400;
+  --type-body-line-height: 1.78;
+
+  /* Typography — decorative / meta (grid numbers, icons) */
+  --type-meta-size: 14px;
+  --type-meta-weight: 500;
+  --type-icon-size: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-body);
+  color: var(--text-dark);
+  line-height: var(--type-body-line-height);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+/* --------------------------------------------------------------------------
+   Global typography system
+   -------------------------------------------------------------------------- */
+.section-label {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  line-height: var(--type-label-line-height);
+  letter-spacing: var(--type-label-letter-spacing);
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin: 0;
+  font-family: var(--font-family-heading);
+  font-size: var(--type-title-size);
+  font-weight: var(--type-title-weight);
+  line-height: var(--type-title-line-height);
+  letter-spacing: var(--type-title-letter-spacing);
+}
+
+.section-description {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--type-description-size);
+  font-weight: var(--type-description-weight);
+  line-height: var(--type-description-line-height);
+}
+
+.card-title {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--type-card-title-size);
+  font-weight: var(--type-card-title-weight);
+  line-height: var(--type-card-title-line-height);
+}
+
+.card-description {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: var(--type-card-description-size);
+  font-weight: var(--type-card-description-weight);
+  line-height: var(--type-card-description-line-height);
+}
+
+/* Action links and buttons that share label typography */
+.section-label--link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.section-subtitle {
+  margin: 0 0 2.5rem;
+  color: var(--text-muted);
+  font-family: var(--font-family-body);
+  font-size: var(--type-description-size);
+  font-weight: var(--type-description-weight);
+  line-height: var(--type-description-line-height);
+}
+
+/* Section spacing — 60px top & bottom */
+main > section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+main > section.hero-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Bootstrap overrides */
+.btn-primary {
+  --bs-btn-bg: var(--maroon);
+  --bs-btn-border-color: var(--maroon);
+  --bs-btn-hover-bg: var(--maroon-dark);
+  --bs-btn-hover-border-color: var(--maroon-dark);
+  --bs-btn-active-bg: var(--maroon-dark);
+  --bs-btn-active-border-color: var(--maroon-dark);
+}
+
+/* Site container — 1440px max (replaces Bootstrap 1140px / 1320px caps) */
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl,
+  .container-xxl {
+    max-width: var(--container-max-width);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll animations
+   -------------------------------------------------------------------------- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* --------------------------------------------------------------------------
+   Inner pages
+   -------------------------------------------------------------------------- */
+.page-content {
+  padding-top: 100px;
+}
+
+@media (min-width: 992px) {
+  .page-content {
+    padding-top: 120px;
+  }
+}
+
+.page-banner {
+  background: linear-gradient(135deg, var(--header-bg) 0%, #e8e0d6 100%);
+  text-align: center;
+}
+
+.page-banner__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: var(--type-title-weight);
+  line-height: var(--type-title-line-height);
+  letter-spacing: var(--type-title-letter-spacing);
+  color: var(--maroon);
+  margin-bottom: 0.5rem;
+}
+
+.page-banner__subtitle {
+  font-family: var(--font-family-body);
+  font-size: var(--type-description-size);
+  font-weight: var(--type-description-weight);
+  line-height: var(--type-description-line-height);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Services
+   -------------------------------------------------------------------------- */
+.service-card {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
