@@ -468,6 +468,100 @@ a {
   background: rgba(139, 29, 84, 0.05);
 }
 
+/* --------------------------------------------------------------------------
+   Services mega-menu (hover panel listing all 10 service domains)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+  .header-nav__dropdown--mega {
+    position: relative;
+  }
+
+  .header-nav__mega {
+    width: 460px;
+    max-width: calc(100vw - 40px);
+    min-width: 0;
+    padding: 8px;
+    /* Keep the wide panel from spilling off the right edge of the viewport */
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+  }
+
+  .header-nav__dropdown--mega:hover .header-nav__mega,
+  .header-nav__dropdown--mega.is-open .header-nav__mega {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.header-nav__mega-item + .header-nav__mega-item {
+  border-top: 1px solid #f0eae3;
+}
+
+.header-nav__mega-item > a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 13.5px;
+}
+
+.header-nav__mega-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(139, 34, 82, 0.07);
+  color: var(--maroon);
+  transition: background var(--transition), color var(--transition);
+}
+
+.header-nav__mega-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.header-nav__mega-label {
+  color: var(--text-dark);
+  font-weight: 500;
+  line-height: 1.3;
+  transition: color var(--transition);
+}
+
+.header-nav__mega-item > a:hover {
+  background: rgba(139, 34, 82, 0.05);
+}
+
+.header-nav__mega-item > a:hover .header-nav__mega-icon {
+  background: var(--maroon);
+  color: #fff;
+}
+
+.header-nav__mega-item > a:hover .header-nav__mega-label {
+  color: var(--maroon);
+}
+
+@media (max-width: 1199.98px) {
+  /* On mobile the mega-menu collapses into the stacked accordion like other submenus */
+  .header-nav__mega {
+    padding-left: 8px;
+  }
+
+  .header-nav__mega-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .header-nav__mega-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 .header-actions {
   display: flex;
   align-items: center;
