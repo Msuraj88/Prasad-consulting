@@ -91,11 +91,16 @@
 /* --------------------------------------------------------------------------
    Tabs
    -------------------------------------------------------------------------- */
+.svc-tabs-wrap {
+  position: relative;
+  margin: 36px 0 28px;
+}
+
 .svc-tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin: 36px 0 28px;
+  margin: 0;
 }
 
 .svc-tab {
@@ -172,6 +177,24 @@
   width: 16px;
   height: 16px;
   background: var(--svc-navy);
+}
+
+.svc-tabs__scroll-hint {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 10px 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--svc-muted);
+}
+
+.svc-tabs__scroll-hint svg {
+  width: 18px;
+  height: 18px;
+  color: var(--svc-navy-soft);
 }
 
 /* --------------------------------------------------------------------------
@@ -463,11 +486,79 @@
     padding: 130px 0 52px;
   }
 
-  /* Wrap into rows of ~5 on tablet instead of scrolling */
-  .svc-tab {
-    flex: 1 1 calc(20% - 12px);
+  .svc-tabs-wrap {
+    margin-left: -12px;
+    margin-right: -12px;
   }
 
+  .svc-tabs-wrap::before,
+  .svc-tabs-wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 28px;
+    width: 40px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity var(--transition);
+  }
+
+  .svc-tabs-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0));
+  }
+
+  .svc-tabs-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, #fff 30%, rgba(255, 255, 255, 0));
+  }
+
+  .svc-tabs-wrap.can-scroll-left::before,
+  .svc-tabs-wrap.can-scroll-right::after {
+    opacity: 1;
+  }
+
+  .svc-tabs-wrap.is-scrollable .svc-tabs__scroll-hint {
+    display: flex;
+  }
+
+  .svc-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 12px;
+    gap: 12px;
+    padding: 0 12px 18px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--svc-navy-soft) transparent;
+  }
+
+  .svc-tabs::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .svc-tabs::-webkit-scrollbar-track {
+    margin-inline: 12px;
+    background: transparent;
+  }
+
+  .svc-tabs::-webkit-scrollbar-thumb {
+    background: rgba(12, 35, 64, 0.28);
+    border-radius: 999px;
+  }
+
+  .svc-tab {
+    flex: 0 0 158px;
+    min-width: 158px;
+    scroll-snap-align: start;
+  }
+
+  .svc-tab:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -504,14 +595,5 @@
 
   .svc-hero {
     padding: 110px 0 44px;
-  }
-
-  .svc-tabs {
-    gap: 10px;
-  }
-
-  /* Two per row on small phones */
-  .svc-tab {
-    flex: 1 1 calc(50% - 10px);
   }
 }

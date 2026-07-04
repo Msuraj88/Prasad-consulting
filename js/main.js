@@ -41,7 +41,7 @@
     const nav = header.querySelector(".header-nav");
     const dropdowns = header.querySelectorAll(".header-nav__dropdown");
     const links = header.querySelectorAll(
-      ".header-nav__link:not(.header-nav__link--dropdown), .header-nav__submenu a"
+      ".header-nav__link:not(.header-nav__link--dropdown), .header-nav__submenu a, .header-nav__cta .header-cta"
     );
 
     if (toggle && nav) {

@@ -200,6 +200,32 @@
     });
   }
 
+  function scrollActiveTabIntoView(index) {
+    if (!window.matchMedia("(max-width: 991.98px)").matches) return;
+    var tab = state.topTabs[index];
+    if (!tab) return;
+    tab.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
+  }
+
+  function initTabsScroll() {
+    var wrap = document.getElementById("svcTabsWrap");
+    var tabsEl = document.getElementById("svcTabs");
+    if (!wrap || !tabsEl) return;
+
+    function updateScrollState() {
+      var maxScroll = tabsEl.scrollWidth - tabsEl.clientWidth;
+      var scrollable = maxScroll > 4;
+      wrap.classList.toggle("is-scrollable", scrollable);
+      wrap.classList.toggle("can-scroll-left", scrollable && tabsEl.scrollLeft > 4);
+      wrap.classList.toggle("can-scroll-right", scrollable && tabsEl.scrollLeft < maxScroll - 4);
+    }
+
+    tabsEl.addEventListener("scroll", updateScrollState, { passive: true });
+    window.addEventListener("resize", updateScrollState);
+    updateScrollState();
+    requestAnimationFrame(updateScrollState);
+  }
+
   function selectDomain(index, updateHash) {
     var domain = SERVICES[index];
     if (!domain) return;
@@ -214,6 +240,7 @@
     renderSubTabs(domain);
     state.sub = -1;
     renderDomainOverview(domain);
+    scrollActiveTabIntoView(index);
 
     if (updateHash && window.history && window.history.replaceState) {
       window.history.replaceState(null, "", "#" + domain.id);
@@ -255,12 +282,13 @@
     if (!tabsEl || !state.listEl || !state.detailEl) return;
 
     buildTopTabs(tabsEl);
+    initTabsScroll();
 
     var start = indexFromHash();
     selectDomain(start, false);
 
     if (start > 0 && state.topTabs[start]) {
-      state.topTabs[start].scrollIntoView({ inline: "center", block: "nearest" });
+      scrollActiveTabIntoView(start);
     }
 
     window.addEventListener("hashchange", function () {

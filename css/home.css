@@ -22,6 +22,20 @@
   object-position: center top;
 }
 
+.hero-banner--mobile {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .hero-banner--desktop {
+    display: none;
+  }
+
+  .hero-banner--mobile {
+    display: block;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Who We Are
    -------------------------------------------------------------------------- */
@@ -153,7 +167,7 @@
   background-color: var(--sd-bg);
   background-image: url("../assets/images/home/services-bg.png");
   background-repeat: no-repeat;
-  background-position: center top;
+  /* background-position: center top; */
   background-size: cover;
   overflow: hidden;
 }
@@ -1716,8 +1730,8 @@
 
 .news-events__container {
   max-width: 1440px;
-  /* padding-top: 80px;
-  padding-bottom: 80px; */
+  padding-top: 60px;
+  /* padding-bottom: 80px; */
 }
 
 .news-events__layout {
