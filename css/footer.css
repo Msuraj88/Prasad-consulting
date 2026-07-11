@@ -21,9 +21,9 @@
 }
 
 .pc-footer__wrap {
-  max-width: 1440px;
+  max-width: var(--container-max-width, 1440px);
   margin: 0 auto;
-  padding: 52px 40px;
+  padding: 52px var(--site-gutter-x, 16px);
 }
 
 /* ── Top bar ─────────────────────────────────────────────────────────────── */
