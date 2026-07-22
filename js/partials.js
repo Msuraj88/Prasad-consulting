@@ -13,17 +13,7 @@ window.SITE_PARTIALS = {
         <div class="header-nav__inner">
           <ul class="header-nav__list">
             <li><a href="index.html" class="header-nav__link" data-nav="home">Home</a></li>
-            <li class="header-nav__dropdown">
-              <button type="button" class="header-nav__link header-nav__link--dropdown" data-nav="about" aria-expanded="false">
-                About Us
-                <svg class="header-nav__chevron" width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
-              </button>
-              <ul class="header-nav__submenu">
-                <li><a href="about.html" data-nav="about">Our Story</a></li>
-                <li><a href="about.html#leadership" data-nav="about">Leadership</a></li>
-                <li><a href="about.html#vision" data-nav="about">Vision &amp; Mission</a></li>
-              </ul>
-            </li>
+            <li><a href="about.html" class="header-nav__link" data-nav="about">About Us</a></li>
             <li class="header-nav__dropdown header-nav__dropdown--mega">
               <button type="button" class="header-nav__link header-nav__link--dropdown" data-nav="services" aria-expanded="false">
                 Services

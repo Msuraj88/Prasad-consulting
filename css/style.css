@@ -80,13 +80,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   font-family: var(--font-family-body);
   color: var(--text-dark);
   line-height: var(--type-body-line-height);
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: 0;
 }
 

@@ -3,58 +3,548 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Prasad Consulting — Our story, leadership, and vision">
+  <meta name="description" content="About Prasad Consulting Hyd (India) Pvt Ltd — Who we are, our vision and mission">
   <title>About Us | Prasad Consulting</title>
   <link rel="icon" href="assets/fevicon.png" type="image/png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/about.css">
   <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
   <div id="header"></div>
 
-  <main class="page-content">
+  <main class="page-content about-page">
 
-    <section class="page-banner fade-up">
-      <div class="container">
-        <h1 class="page-banner__title">About Us</h1>
-        <p class="page-banner__subtitle">Our story, leadership, and commitment to excellence</p>
+    <!-- Section A — About (image left, text in container right) -->
+    <section id="about-intro" class="about-split about-split--media-left about-a fade-up" aria-labelledby="about-a-heading">
+      <div class="about-split__media">
+        <img src="assets/images/about/aboutA.png" alt="About Prasad Consulting" width="960" height="1200" loading="eager" decoding="async">
       </div>
-    </section>
-
-    <section id="leadership" class="fade-up">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <h2 class="section-title">Our Story</h2>
-            <p class="text-secondary">
-              Prasad Consulting is a Hyderabad-based firm dedicated to crafting strategies
-              and cultivating excellence across industries. Content for this section will be
-              added as designs are provided.
+      <div class="container about-split__body">
+        <div class="about-split__text">
+          <header class="about-heading">
+            <div class="about-heading__text">
+              <h1 class="about-heading__title" id="about-a-heading">About Prasad Consulting<br>Hyd (India) Pvt Ltd</h1>
+              <span class="about-heading__rule" aria-hidden="true"></span>
+            </div>
+          </header>
+          <div class="about-a__body">
+            <p>Prasad Consulting Hyd (India) Pvt Ltd is a multidisciplinary strategic consulting organisation providing professional advisory services, business solutions, technology guidance, defence consulting, industrial transformation support, academia&ndash;industry collaboration and innovation ecosystem development.</p>
+            <p>With decades of leadership experience spanning defence, aerospace, homeland security, strategic technologies, industrial development, management consulting and institutional transformation, Prasad Consulting serves as a trusted adviser to organisations seeking sustainable growth and strategic advantage.</p>
+            <p class="about-a__emphasis">
+              <strong>Our focus is not merely to advise.</strong><br>
+              <strong>Our focus is to create measurable value, sustainable growth and long-term strategic advantage for every client engagement.</strong>
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="vision" class="bg-light fade-up">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-md-6">
-            <h2 class="section-title">Vision</h2>
-            <p class="text-secondary">Vision statement placeholder.</p>
-          </div>
-          <div class="col-md-6">
-            <h2 class="section-title">Mission</h2>
-            <p class="text-secondary">Mission statement placeholder.</p>
+    <!-- Section B — Who We Are (text in container left, image right) -->
+    <section id="who-we-are" class="about-split about-split--media-right about-b fade-up" aria-labelledby="about-b-heading">
+      <div class="about-split__media">
+        <img src="assets/images/about/aboutB.png" alt="Who we are at Prasad Consulting" width="960" height="1200" loading="lazy" decoding="async">
+      </div>
+      <div class="container about-split__body">
+        <div class="about-split__text">
+          <header class="about-heading">
+            <div class="about-heading__text">
+              <h2 class="about-heading__title" id="about-b-heading">Who We Are</h2>
+            </div>
+          </header>
+          <p class="about-b__lead">We are a strategic consulting organisation built on deep domain expertise, integrity and a commitment to measurable outcomes.</p>
+          <p class="about-b__span-label">Our consulting engagements span:</p>
+          <ul class="about-b__list">
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18V6M8 18V10M12 18V4M16 18V13M20 18V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+              Strategic advisory
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4l1.4-1.4M17 7l1.4-1.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+              AI-enabled consulting services
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              Technology consulting
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.2-3 7.8-7 9-4-1.2-7-4.8-7-9V7l7-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+              Defence &amp; aerospace consulting
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 12H5l7-12z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.5 15h5M12 15v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+              Corporate growth advisory
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19h16M7 19V9l5-4 5 4v10" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+              Organisational transformation
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M8.5 12.5l2.2 2.2L16 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              Quality systems &amp; certifications
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v4M9 8l-2-2M15 8l2-2M8 12H4M20 12h-4M9 16l-2 2M15 16l2 2M12 17v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="2.5" stroke="currentColor" stroke-width="1.5"/></svg></span>
+              Innovation &amp; incubation support
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 9l8-4 8 4-8 4-8-4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M4 14l8 4 8-4M12 13v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              Academia&ndash;industry collaboration
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 12h16M12 4c2.5 2.2 4 5.2 4 8s-1.5 5.8-4 8M12 4c-2.5 2.2-4 5.2-4 8s1.5 5.8 4 8" stroke="currentColor" stroke-width="1.3"/></svg></span>
+              Foreign OEM facilitation
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 19h18M5 19V9h4v10M11 19V6h4v13M17 19v-7h4v7" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+              Industrial development advisory
+            </li>
+            <li>
+              <span class="about-b__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.2-3 7.8-7 9-4-1.2-7-4.8-7-9V7l7-4z" stroke="currentColor" stroke-width="1.5"/><path d="M10 12l1.5 1.5L14.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              Institutional excellence programmes
+            </li>
+          </ul>
+          <div class="about-b__footer">
+            <span class="about-b__footer-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="2.2" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="9" r="2.2" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="7" r="2.2" stroke="currentColor" stroke-width="1.5"/><path d="M5 18c0-2.8 2.7-4 7-4s7 1.2 7 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <p>We serve organisations ranging from startups and MSMEs to large enterprises, defence establishments, academic institutions and public-sector stakeholders.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Section C — Vision (image left, text in container right) -->
+    <section id="vision" class="about-split about-split--media-left about-c fade-up" aria-labelledby="about-c-heading">
+      <div class="about-split__media">
+        <img src="assets/images/about/aboutC.png" alt="Our vision" width="960" height="1200" loading="lazy" decoding="async">
+      </div>
+      <div class="container about-split__body">
+        <div class="about-split__text">
+          <header class="about-heading">
+            <div class="about-heading__text">
+              <h2 class="about-heading__title" id="about-c-heading">Our Vision</h2>
+              <span class="about-heading__rule" aria-hidden="true"></span>
+            </div>
+          </header>
+          <div class="about-c__body">
+            <p>To be a trusted strategic partner enabling organisations to achieve sustainable growth, technological excellence and competitive advantage across defence, aerospace, industry and innovation ecosystems.</p>
+            <div class="about-c__ornament" aria-hidden="true">
+              <span class="about-c__ring"></span>
+              <span class="about-c__ring"></span>
+              <span class="about-c__ring"></span>
+              <svg class="about-c__eye" viewBox="0 0 48 48" fill="none">
+                <ellipse cx="24" cy="24" rx="16" ry="10" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="2"/>
+                <circle cx="24" cy="24" r="2" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section D — Mission (text in container left, image right) -->
+    <section id="mission" class="about-split about-split--media-right about-d fade-up" aria-labelledby="about-d-heading">
+      <div class="about-split__media">
+        <img src="assets/images/about/aboutD.png" alt="Our mission" width="960" height="1200" loading="lazy" decoding="async">
+      </div>
+      <div class="container about-split__body">
+        <div class="about-split__text">
+          <header class="about-heading">
+            <div class="about-heading__text">
+              <h2 class="about-heading__title" id="about-d-heading">Our Mission</h2>
+              <span class="about-heading__rule" aria-hidden="true"></span>
+            </div>
+          </header>
+          <div class="about-d__body">
+            <div class="about-d__target" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none">
+                <circle cx="52" cy="60" r="40" stroke="#1a305d" stroke-width="6"/>
+                <circle cx="52" cy="60" r="26" stroke="#1a305d" stroke-width="5"/>
+                <circle cx="52" cy="60" r="12" fill="#1a305d"/>
+                <circle cx="52" cy="60" r="5" fill="#c5a043"/>
+                <path d="M68 48l38-28-10 18 18 8-46 2z" fill="#c5a043"/>
+                <path d="M68 48l38-28" stroke="#1a305d" stroke-width="2"/>
+              </svg>
+            </div>
+            <p>To deliver high-impact advisory and technology-driven solutions that strengthen organisations, accelerate innovation and create lasting strategic value for our clients and partners.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accordion sections E–L -->
+    <section class="about-acc" aria-label="About Prasad Consulting details">
+      <div class="container about-acc__container">
+
+        <!-- E. Our Core Values -->
+        <div class="about-acc__item" id="core-values">
+          <button type="button" class="about-acc__trigger" aria-expanded="false" aria-controls="acc-panel-e">
+            <span class="about-acc__title">Our Core Values</span>
+            <span class="about-acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="about-acc__panel" id="acc-panel-e" role="region" hidden>
+            <div class="about-acc__panel-inner">
+              <div class="about-values">
+                <article class="about-values__item">
+                  <span class="about-values__icon" aria-hidden="true">
+                    <img src="assets/images/about/Value1.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                  </span>
+                  <h3 class="about-values__name">Professional Integrity</h3>
+                  <p class="about-values__text">Maintaining the highest standards of ethics, transparency and accountability.</p>
+                </article>
+                <article class="about-values__item">
+                  <span class="about-values__icon" aria-hidden="true">
+                    <img src="assets/images/about/Value2.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                  </span>
+                  <h3 class="about-values__name">Strategic Thinking</h3>
+                  <p class="about-values__text">Viewing challenges through long-term perspectives and sustainable solutions.</p>
+                </article>
+                <article class="about-values__item">
+                  <span class="about-values__icon" aria-hidden="true">
+                    <img src="assets/images/about/Value3.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                  </span>
+                  <h3 class="about-values__name">Excellence</h3>
+                  <p class="about-values__text">Striving continuously for superior outcomes and professional quality.</p>
+                </article>
+                <article class="about-values__item">
+                  <span class="about-values__icon" aria-hidden="true">
+                    <img src="assets/images/about/Value4.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                  </span>
+                  <h3 class="about-values__name">Innovation</h3>
+                  <p class="about-values__text">Promoting creativity, technology adoption and transformative thinking.</p>
+                </article>
+                <article class="about-values__item">
+                  <span class="about-values__icon" aria-hidden="true">
+                    <img src="assets/images/about/Value5.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                  </span>
+                  <h3 class="about-values__name">Collaboration</h3>
+                  <p class="about-values__text">Building meaningful partnerships and collaborative ecosystems.</p>
+                </article>
+                <article class="about-values__item">
+                  <span class="about-values__icon" aria-hidden="true">
+                    <img src="assets/images/about/Value6.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                  </span>
+                  <h3 class="about-values__name">National Development</h3>
+                  <p class="about-values__text">Supporting initiatives that contribute to industrial growth, technology advancement and national capability enhancement.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- F. Our Strategic Philosophy -->
+        <div class="about-acc__item" id="philosophy">
+          <button type="button" class="about-acc__trigger" aria-expanded="false" aria-controls="acc-panel-f">
+            <span class="about-acc__title">Our Strategic Philosophy</span>
+            <span class="about-acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="about-acc__panel" id="acc-panel-f" role="region" hidden>
+            <div class="about-acc__panel-inner">
+              <div class="about-philo">
+                <div class="about-philo__grid">
+                  <div class="about-philo__intro">
+                    <p>We believe that sustainable success is achieved when strategic vision, technology, innovation, operational excellence and human capability work together in harmony.</p>
+                    <p>Our consulting philosophy is founded upon five pillars:</p>
+                  </div>
+                  <div class="about-philo__main">
+                    <div class="about-philo__pillars">
+                      <article class="about-philo__pillar">
+                        <span class="about-philo__icon" aria-hidden="true">
+                          <img src="assets/images/about/Strategic1.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                        </span>
+                        <p class="about-philo__label">Pillar-1 Strategic Clarity</p>
+                      </article>
+                      <article class="about-philo__pillar">
+                        <span class="about-philo__icon" aria-hidden="true">
+                          <img src="assets/images/about/Strategic2.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                        </span>
+                        <p class="about-philo__label">Pillar-2 Technology Leadership</p>
+                      </article>
+                      <article class="about-philo__pillar">
+                        <span class="about-philo__icon" aria-hidden="true">
+                          <img src="assets/images/about/Strategic3.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                        </span>
+                        <p class="about-philo__label">Pillar-3 AI-Enabled Decision Support</p>
+                      </article>
+                      <article class="about-philo__pillar">
+                        <span class="about-philo__icon" aria-hidden="true">
+                          <img src="assets/images/about/Strategic4.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                        </span>
+                        <p class="about-philo__label">Pillar-4 Collaborative Ecosystems</p>
+                      </article>
+                      <article class="about-philo__pillar">
+                        <span class="about-philo__icon" aria-hidden="true">
+                          <img src="assets/images/about/Strategic5.svg" alt="" width="90" height="90" loading="lazy" decoding="async">
+                        </span>
+                        <p class="about-philo__label">Pillar-5 Execution Excellence</p>
+                      </article>
+                    </div>
+                    <p class="about-philo__foot">Every engagement undertaken by Prasad Consulting is guided by these principles.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- G. Our Leadership -->
+        <div class="about-acc__item" id="leadership">
+          <button type="button" class="about-acc__trigger" aria-expanded="false" aria-controls="acc-panel-g">
+            <span class="about-acc__title">Our Leadership</span>
+            <span class="about-acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="about-acc__panel" id="acc-panel-g" role="region" hidden>
+            <div class="about-acc__panel-inner">
+              <div class="about-leaders">
+                <article class="about-leader">
+                  <div class="about-leader__top">
+                    <div class="about-leader__photo">
+                      <img src="assets/images/Prasad.png" alt="Commander Prasad YVV" width="160" height="160" loading="lazy" decoding="async">
+                    </div>
+                    <div class="about-leader__header">
+                      <h3 class="about-leader__name">Commander Prasad YVV</h3>
+                      <p class="about-leader__role">Founder &amp; Managing Director, Principal Strategic Defence Adviser and Expert-Master Consultant</p>
+                      <p class="about-leader__tags">Strategic Adviser | Defence Technologist | Industry Transformation Specialist | Academia-Industry Evangelist</p>
+                    </div>
+                  </div>
+                  <div class="about-leader__body">
+                    <p class="about-leader__label">Professional Highlights:</p>
+                    <ul class="about-leader__list">
+                      <li>More than four decades of distinguished professional experience</li>
+                      <li>Senior leadership positions across defence and industry</li>
+                      <li>Strategic advisory engagements across multiple sectors</li>
+                      <li>Extensive expertise in defence, aerospace and homeland security</li>
+                      <li>Specialist in surveillance, security and technology systems</li>
+                      <li>Thought leader in innovation, incubation and institutional transformation</li>
+                      <li>Recognised contributor to industry, academia and national capability development</li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="about-leader">
+                  <div class="about-leader__top">
+                    <div class="about-leader__photo">
+                      <img src="assets/images/Anitha.png" alt="Venkat Anitha K" width="160" height="160" loading="lazy" decoding="async">
+                    </div>
+                    <div class="about-leader__header">
+                      <h3 class="about-leader__name">Venkat Anitha K</h3>
+                      <p class="about-leader__role">Director (Finance, Administration &amp; Coordination)</p>
+                      <p class="about-leader__tags">Chartered Accountant | Financial Analyst | Strategic Business Professional</p>
+                    </div>
+                  </div>
+                  <div class="about-leader__body">
+                    <p class="about-leader__label">Professional Highlights:</p>
+                    <ul class="about-leader__list">
+                      <li>Financial and business advisory expertise</li>
+                      <li>Corporate governance and compliance experience</li>
+                      <li>Strategic planning and project support</li>
+                      <li>Outreach programme coordination</li>
+                      <li>Industry engagement and consulting support</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- H. The Prasad Consulting Advantage -->
+        <div class="about-acc__item" id="advantage">
+          <button type="button" class="about-acc__trigger" aria-expanded="false" aria-controls="acc-panel-h">
+            <span class="about-acc__title">The Prasad Consulting Advantage</span>
+            <span class="about-acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="about-acc__panel" id="acc-panel-h" role="region" hidden>
+            <div class="about-acc__panel-inner">
+              <ul class="about-adv">
+                <li>Defence and civilian domain convergence</li>
+                <li>AI-enabled consulting methodologies</li>
+                <li>Strategic and technical expertise under one roof</li>
+                <li>Deep industrial and institutional understanding</li>
+                <li>Strong academia–industry interface</li>
+                <li>Proven leadership across multiple sectors</li>
+                <li>Focus on measurable outcomes and execution</li>
+                <li>National and international collaborative outlook</li>
+                <li>Integrity-driven professional practice</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- I. Domains of Expertise -->
+        <div class="about-acc__item" id="domains">
+          <button type="button" class="about-acc__trigger" aria-expanded="false" aria-controls="acc-panel-i">
+            <span class="about-acc__title">Domains of Expertise</span>
+            <span class="about-acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="about-acc__panel" id="acc-panel-i" role="region" hidden>
+            <div class="about-acc__panel-inner">
+              <div class="about-domains">
+                <div class="about-domains__visual">
+                  <img src="assets/images/about/Domains.png" alt="Domains of expertise" width="440" height="440" loading="lazy" decoding="async">
+                </div>
+                <ul class="about-domains__col">
+                  <li style="--dot:#b8860b">Strategic Business Advisory</li>
+                  <li style="--dot:#2e1f54">Defence &amp; Aerospace</li>
+                  <li style="--dot:#2f6fed">Homeland Security</li>
+                  <li style="--dot:#6b7c32">Surveillance &amp; Security</li>
+                  <li style="--dot:#5b2d8e">Cyber Security</li>
+                </ul>
+                <ul class="about-domains__col">
+                  <li style="--dot:#1e88e5">Artificial Intelligence</li>
+                  <li style="--dot:#00897b">Technology Innovation</li>
+                  <li style="--dot:#c0ca33">Corporate Transformation</li>
+                  <li style="--dot:#f9a825">Industrial Growth</li>
+                  <li style="--dot:#ef6c00">Quality Systems</li>
+                </ul>
+                <ul class="about-domains__col">
+                  <li style="--dot:#00838f">Technology Transfer</li>
+                  <li style="--dot:#7cb342">Academia&mdash;Industry Interface</li>
+                  <li style="--dot:#1a305d">Maritime &amp; Shipbuilding Infrastructure</li>
+                  <li style="--dot:#d84315">International Business Development</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- J. Our Approach to Client Engagement -->
+        <div class="about-acc__item" id="approach">
+          <button type="button" class="about-acc__trigger" aria-expanded="false" aria-controls="acc-panel-j">
+            <span class="about-acc__title">Our Approach to Client Engagement</span>
+            <span class="about-acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="about-acc__panel" id="acc-panel-j" role="region" hidden>
+            <div class="about-acc__panel-inner">
+              <ol class="about-steps">
+                <li class="about-steps__item">
+                  <span class="about-steps__icon" aria-hidden="true">
+                    <img src="assets/images/about/Approach1.svg" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  </span>
+                  <span class="about-steps__num">Step-1</span>
+                  <span class="about-steps__name">Understand</span>
+                </li>
+                <li class="about-steps__item">
+                  <span class="about-steps__icon" aria-hidden="true">
+                    <img src="assets/images/about/Approach2.svg" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  </span>
+                  <span class="about-steps__num">Step-2</span>
+                  <span class="about-steps__name">Analyse</span>
+                </li>
+                <li class="about-steps__item">
+                  <span class="about-steps__icon" aria-hidden="true">
+                    <img src="assets/images/about/Approach3.svg" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  </span>
+                  <span class="about-steps__num">Step-3</span>
+                  <span class="about-steps__name">Strategise</span>
+                </li>
+                <li class="about-steps__item">
+                  <span class="about-steps__icon" aria-hidden="true">
+                    <img src="assets/images/about/Approach4.svg" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  </span>
+                  <span class="about-steps__num">Step-4</span>
+                  <span class="about-steps__name">Plan</span>
+                </li>
+                <li class="about-steps__item">
+                  <span class="about-steps__icon" aria-hidden="true">
+                    <img src="assets/images/about/Approach5.svg" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  </span>
+                  <span class="about-steps__num">Step-5</span>
+                  <span class="about-steps__name">Enable</span>
+                </li>
+                <li class="about-steps__item">
+                  <span class="about-steps__icon" aria-hidden="true">
+                    <img src="assets/images/about/Approach6.svg" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  </span>
+                  <span class="about-steps__num">Step-6</span>
+                  <span class="about-steps__name">Transform</span>
+                </li>
+                <li class="about-steps__item">
+                  <span class="about-steps__icon" aria-hidden="true">
+                    <img src="assets/images/about/Approach7.svg" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  </span>
+                  <span class="about-steps__num">Step-7</span>
+                  <span class="about-steps__name">Sustain</span>
+                </li>
+              </ol>
+              <p class="about-steps__foot">Our engagement model ensures that every client receives solutions that are practical, measurable, scalable and aligned with long-term objectives.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- K. Our National & International Outlook -->
+        <div class="about-acc__item" id="outlook">
+          <button type="button" class="about-acc__trigger" aria-expanded="false" aria-controls="acc-panel-k">
+            <span class="about-acc__title">Our National &amp; International Outlook</span>
+            <span class="about-acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="about-acc__panel" id="acc-panel-k" role="region" hidden>
+            <div class="about-acc__panel-inner">
+              <div class="about-outlook">
+                <div class="about-outlook__map">
+                  <img src="assets/images/about/outlook.png" alt="National and international outlook map" width="640" height="480" loading="lazy" decoding="async">
+                </div>
+                <div class="about-outlook__copy">
+                  <article class="about-outlook__block">
+                    <span class="about-outlook__icon" aria-hidden="true">
+                      <svg viewBox="0 0 56 56" fill="none">
+                        <circle cx="28" cy="28" r="27" fill="#201769"/>
+                        <path d="M16 36V22l6-4 6 4v14H16z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+                        <path d="M22 36V28h4v8M18 26h8M18 30h4" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+                        <path d="M30 36V20l8-5 8 5v16H30z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+                        <path d="M36 36v-8h4v8M34 24h8M34 28h5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                    <p>Prasad Consulting actively promotes collaboration among industries, academic institutions, research organisations, startups, defence establishments and international technology providers.</p>
+                  </article>
+                  <article class="about-outlook__block">
+                    <span class="about-outlook__icon" aria-hidden="true">
+                      <svg viewBox="0 0 56 56" fill="none">
+                        <circle cx="28" cy="28" r="27" fill="#201769"/>
+                        <circle cx="20" cy="20" r="4" stroke="#fff" stroke-width="1.6"/>
+                        <circle cx="36" cy="20" r="4" stroke="#fff" stroke-width="1.6"/>
+                        <circle cx="28" cy="34" r="4" stroke="#fff" stroke-width="1.6"/>
+                        <path d="M23.5 22.5l8 0M22 23.5l4.5 7M34 23.5l-4.5 7" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                    </span>
+                    <p>Our objective is to create bridges between innovation and implementation, between research and commercialisation, and between global technologies and Indian opportunities.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- L. Call to Engagement -->
+        <div class="about-acc__item" id="engage">
+          <button type="button" class="about-acc__trigger" aria-expanded="false" aria-controls="acc-panel-l">
+            <span class="about-acc__title">Call to Engagement</span>
+            <span class="about-acc__icon" aria-hidden="true"></span>
+          </button>
+          <div class="about-acc__panel" id="acc-panel-l" role="region" hidden>
+            <div class="about-acc__panel-inner">
+              <div class="about-cta">
+                <div class="about-cta__media">
+                  <img src="assets/images/about/about-cta__media.png" alt="" width="800" height="560" loading="lazy" decoding="async">
+                </div>
+                <div class="about-cta__box">
+                  <h3 class="about-cta__title">Let Us Partner in Your Strategic Journey.</h3>
+                  <p class="about-cta__text">Whether you seek growth, transformation, technology leadership, defence expertise or institutional excellence — our team stands ready to support your journey.</p>
+                  <a href="contact.html" class="about-cta__btn">Connect With Us <span aria-hidden="true">&rarr;</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -66,5 +556,6 @@
   <script src="js/partials.js"></script>
   <script src="js/include.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/about.js"></script>
 </body>
 </html>
