@@ -60,7 +60,7 @@
 
 .who-we-are__collage {
   width: 100%;
-  max-width: 580px;
+  max-width: 640px;
   height: auto;
 }
 
@@ -81,7 +81,8 @@
 .who-we-are__text {
   margin: 0 0 20px;
   color: var(--who-navy);
-  font-size: larger;
+  font-size: 23px;
+  line-height: 1.55;
 }
 
 .who-we-are__text:last-of-type {
@@ -123,7 +124,7 @@
 
 @media (min-width: 1400px) {
   .who-we-are__collage {
-    max-width: 620px;
+    max-width: 680px;
   }
 }
 
@@ -144,7 +145,7 @@
   }
 
   .who-we-are__collage {
-    max-width: 480px;
+    max-width: 520px;
   }
 }
 
