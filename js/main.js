@@ -10,6 +10,8 @@
     "index.html": "home",
     "about.html": "about",
     "services.html": "services",
+    "partnerships.html": "partnerships",
+    "leadership.html": "leadership",
     "contact.html": "contact",
   };
 
