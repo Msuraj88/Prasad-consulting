@@ -2,7 +2,7 @@
  * services.js \u2014 Services page tabbed explorer
  *
  * Two levels of tabs:
- *   1. Top tabs  = 10 service domains
+ *   1. Top tabs  = 11 service domains
  *   2. Side tabs = sub-services of the active domain
  * Selecting a sub-service renders a detail template (intro + visuals +
  * Services Include / Deliverables / Client Benefits). Data-driven so the
@@ -22,7 +22,8 @@
     people: '<circle cx="8" cy="9" r="2.2" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="9" r="2.2" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="7" r="2.2" stroke="currentColor" stroke-width="1.5"/><path d="M5 18c0-2.8 2.7-4 7-4s7 1.2 7 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>',
     globe: '<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M4 12h16M12 4c2.5 2.2 4 5.2 4 8s-1.5 5.8-4 8M12 4c-2.5 2.2-4 5.2-4 8s1.5 5.8 4 8" stroke="currentColor" stroke-width="1.4"/>',
     transfer: '<path d="M7 11.5c1.5-1 3.2-1.5 5-1.5s3.5.5 5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 14.5c1.2.8 2.6 1.2 4 1.2s2.8-.4 4-1.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9.5 9.5L7 7M14.5 9.5L17 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>',
-    cap: '<path d="M4 9l8-4 8 4-8 4-8-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 14l8 4 8-4M12 13v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>'
+    cap: '<path d="M4 9l8-4 8 4-8 4-8-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 14l8 4 8-4M12 13v5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>',
+    layers: '<path d="M12 3.5L20 8l-8 4.5L4 8l8-4.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 12l8 4.5L20 12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 16l8 4.5L20 16" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>'
   };
 
   /* ---------- Small UI icons ---------- */
@@ -64,7 +65,7 @@
      A sub may be a plain string (auto-detailed) or an object with:
        { name, desc, include[], deliverables[], benefits[] }
      ========================================================================== */
-  var ICON_LIST = [ICONS.bars, ICONS.venture, ICONS.search, ICONS.gear, ICONS.shieldCheck, ICONS.circleCheck, ICONS.people, ICONS.globe, ICONS.transfer, ICONS.cap];
+  var ICON_LIST = [ICONS.bars, ICONS.venture, ICONS.search, ICONS.gear, ICONS.shieldCheck, ICONS.circleCheck, ICONS.people, ICONS.globe, ICONS.transfer, ICONS.cap, ICONS.layers];
 
   // Domain content lives in js/services-data.js (window.SERVICES_DATA); icons attached by index.
   var SERVICES = (window.SERVICES_DATA || []).map(function (d, i) {
@@ -127,8 +128,11 @@
   /* Domain-level overview shown when a top tab is selected (no sub active) */
   function renderDomainOverview(domain) {
     state.detailEl.innerHTML =
-      '<h2 class="svc-detail__title">' + domain.title + "</h2>" +
-      '<span class="svc-detail__rule" aria-hidden="true"></span>' +
+      '<div class="svc-detail__hero">' +
+        '<span class="svc-detail__hero-icon" aria-hidden="true">' + svg(domain.icon) + "</span>" +
+        '<h2 class="svc-detail__title">' + domain.title + "</h2>" +
+        '<span class="svc-detail__rule" aria-hidden="true"></span>' +
+      "</div>" +
       '<div class="svc-detail__overview">' +
         domain.desc.map(function (p) { return "<p>" + p + "</p>"; }).join("") +
       "</div>";
