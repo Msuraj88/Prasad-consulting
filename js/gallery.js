@@ -169,6 +169,11 @@
     var self = this;
     this.isPaused = false;
     if (this.autoplayTimer) window.clearInterval(this.autoplayTimer);
+    try {
+      if (navigator.connection && navigator.connection.saveData) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if (window.matchMedia("(prefers-reduced-data: reduce)").matches) return;
+    } catch (e) {}
     this.autoplayTimer = window.setInterval(function () {
       if (!self.isPaused) self.goNext();
     }, AUTOPLAY_MS);

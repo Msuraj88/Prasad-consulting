@@ -93,6 +93,30 @@
         });
       }
     });
+
+    function closeMobileNav() {
+      if (nav) nav.classList.remove("is-open");
+      if (toggle) {
+        toggle.classList.remove("is-active");
+        toggle.setAttribute("aria-expanded", "false");
+      }
+      document.body.classList.remove("nav-open");
+      dropdowns.forEach(function (dropdown) {
+        dropdown.classList.remove("is-open");
+        var b = dropdown.querySelector(".header-nav__link--dropdown");
+        if (b) b.setAttribute("aria-expanded", "false");
+      });
+    }
+
+    var desktopMq = window.matchMedia("(min-width: 1200px)");
+    function onViewportChange(e) {
+      if (e.matches) closeMobileNav();
+    }
+    if (desktopMq.addEventListener) {
+      desktopMq.addEventListener("change", onViewportChange);
+    } else if (desktopMq.addListener) {
+      desktopMq.addListener(onViewportChange);
+    }
   }
 
   /* ---------- Sticky header shadow ---------- */
@@ -138,12 +162,19 @@
     });
   }
 
+  function initFloatConsult() {
+    if (PAGE_NAV[getPageFile()] !== "contact") return;
+    var fab = document.querySelector(".float-consult");
+    if (fab) fab.hidden = true;
+  }
+
   function init() {
     setActiveNav();
     initMobileMenu();
     initStickyHeader();
     initFooter();
     initScrollAnimations();
+    initFloatConsult();
   }
 
   document.addEventListener("components:ready", init);

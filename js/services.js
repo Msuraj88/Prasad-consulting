@@ -56,7 +56,13 @@
   }
 
   function figureImg(src, alt) {
-    return '<img class="svc-figure__img" src="' + src + '" alt="' + alt + '">';
+    return (
+      '<img class="svc-figure__img" src="' +
+      src +
+      '" alt="' +
+      alt +
+      '" width="800" height="450" loading="lazy" decoding="async">'
+    );
   }
 
   /* ==========================================================================

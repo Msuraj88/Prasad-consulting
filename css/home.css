@@ -12,6 +12,7 @@
   margin: 0;
   overflow: hidden;
   line-height: 0;
+  background: #0c2340;
 }
 
 .hero-banner {
@@ -22,18 +23,41 @@
   object-position: center top;
 }
 
-.hero-banner--mobile {
-  display: none;
+.hero-poster {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  transition: opacity 0.4s ease;
 }
 
-@media (max-width: 991.98px) {
-  .hero-banner--desktop {
-    display: none;
-  }
+.hero-poster.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 
-  .hero-banner--mobile {
-    display: block;
-  }
+.hero-poster__img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-video.is-ready {
+  opacity: 1;
+  z-index: 2;
+  pointer-events: auto;
 }
 
 /* --------------------------------------------------------------------------
@@ -167,11 +191,16 @@
   --sd-bg: #020a17;
   position: relative;
   background-color: var(--sd-bg);
-  background-image: url("../assets/images/home/services-bg.png");
   background-repeat: no-repeat;
   /* background-position: center top; */
   background-size: cover;
   overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .service-domains {
+    background-image: url("../assets/images/home/services-bg.png");
+  }
 }
 /* 
 .service-domains__bg {
@@ -481,7 +510,48 @@
 }
 
 @media (max-width: 575.98px) {
+  .domain-card__body {
+    padding: 14px 12px;
+  }
 
+  .domain-card__title {
+    font-size: 14px;
+  }
+
+  .domain-card__media {
+    width: 36%;
+  }
+
+  .why-choose__title {
+    font-size: clamp(1.6rem, 7vw, 2.1rem);
+  }
+
+  .why-choose__lead {
+    font-size: 14px;
+  }
+
+  .featured-areas__title {
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
+  }
+
+  .news-events__item {
+    height: auto;
+    min-height: 88px;
+    padding: 14px 16px;
+  }
+
+  .news-events__item-title {
+    font-size: 15px;
+  }
+
+  .client-engagement__inner {
+    padding: 48px 0;
+  }
+
+  .client-engagement__inner::before {
+    opacity: 0.35;
+    background-position: center;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -497,11 +567,16 @@
   --why-divider: #c8d8e8;
   position: relative;
   background-color: var(--why-bg);
-  background-image: url("../assets/images/why-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+  .why-choose {
+    background-image: url("../assets/images/why-bg.png");
+  }
 }
 
 .why-choose__defs {
@@ -801,11 +876,16 @@
   --ld-text-muted: rgba(255, 255, 255, 0.78);
   position: relative;
   background-color: var(--ld-bg-deep);
-  background-image: url("../assets/images/leadership-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+  .leadership {
+    background-image: url("../assets/images/leadership-bg.png");
+  }
 }
 
 .leadership__container {
@@ -1305,11 +1385,16 @@
   --pt-gradient: linear-gradient(90deg, var(--pt-orange) 0%, var(--pt-green-bright) 100%);
   position: relative;
   background-color: #faf9f5;
-  background-image: url("../assets/images/partnerships.png");
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
   overflow-x: hidden;
+}
+
+@media (min-width: 992px) {
+  .partnerships {
+    background-image: url("../assets/images/partnerships.png");
+  }
 }
 
 .partnerships__container {
@@ -1596,11 +1681,16 @@
 .knowledge-centre__hero {
   padding: var(--section-padding-y) 0 32px;
   background-color: #fff;
-  background-image: url("../assets/images/knowledge-centre.png");
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;
   min-height: 280px;
+}
+
+@media (min-width: 992px) {
+  .knowledge-centre__hero {
+    background-image: url("../assets/images/knowledge-centre.png");
+  }
 }
 
 .knowledge-centre__hero-grid {
@@ -2114,8 +2204,13 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../assets/images/client-engagement.png") right center / cover no-repeat;
   pointer-events: none;
+}
+
+@media (min-width: 992px) {
+  .client-engagement__inner::before {
+    background: url("../assets/images/client-engagement.png") right center / cover no-repeat;
+  }
 }
 
 .client-engagement__container {
@@ -2552,5 +2647,24 @@
   .our-gallery__slide,
   .our-gallery__nav {
     transition: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3G: defer layout work for below-fold home sections
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  #who-we-are,
+  #service-domains,
+  #why-choose,
+  .leadership,
+  .featured-areas,
+  .partnerships,
+  .knowledge-centre,
+  .news-events,
+  .client-engagement,
+  .our-gallery {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 720px;
   }
 }

@@ -7,7 +7,7 @@ window.SITE_PARTIALS = {
   <div class="header-bar">
     <div class="header-bar__inner">
       <a href="index.html" class="header-logo" aria-label="Prasad Consulting Home">
-        <img src="assets/images/logo.png" alt="Prasad Consulting — Hyd (India)" class="header-logo__img" width="180" height="48">
+        <img src="assets/images/logo.png" alt="Prasad Consulting — Hyd (India)" class="header-logo__img" width="180" height="48" decoding="async" fetchpriority="high">
       </a>
       <nav class="header-nav" id="header-nav" aria-label="Main navigation">
         <div class="header-nav__inner">
@@ -247,5 +247,9 @@ window.SITE_PARTIALS = {
       </section>
     </div>
   </div>
-</footer>`
+</footer>
+
+<a href="contact.html" class="float-consult" aria-label="Schedule a consultation">
+  <img src="assets/images/schedule-consultation-fab.png" alt="" width="140" height="140" loading="lazy" decoding="async">
+</a>`
 };

@@ -16,12 +16,13 @@
   --ps-border: rgba(26, 48, 93, 0.14);
   margin-top: 140px;
   padding-top: 0;
-  padding-bottom: 64px;
+  padding-bottom: 96px;
   background: #fff;
 }
 
 .page-content.ps-page {
   padding-top: 0;
+  padding-bottom: 96px;
 }
 
 @media (max-width: 991.98px) {
@@ -69,6 +70,7 @@
 }
 
 .ps-hero__body {
+  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -218,8 +220,10 @@
 .ps-card__icon svg,
 .ps-card__icon img {
   display: block;
-  width: 92px;
-  height: 92px;
+  width: 100%;
+  height: 100%;
+  max-width: 72px;
+  max-height: 72px;
   object-fit: contain;
 }
 
@@ -1544,9 +1548,13 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .ps-cards--6,
-  .ps-cards--areas {
+  .ps-cards--6 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ps-cards--areas .ps-card {
+    flex: 0 1 calc((100% - 32px) / 3);
+    max-width: none;
   }
 
   .ps-cards--5 {
@@ -1624,9 +1632,13 @@
   .ps-cards--8,
   .ps-cards--7,
   .ps-cards--6,
-  .ps-cards--5,
-  .ps-cards--areas {
+  .ps-cards--5 {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .ps-cards--areas .ps-card {
+    flex: 0 1 calc((100% - 16px) / 2);
+    max-width: none;
   }
 
   .ps-cards--industry .ps-card {
@@ -1705,8 +1717,39 @@
     display: none;
   }
 
+  .ps-flow {
+    gap: 10px 0;
+  }
+
   .ps-flow li {
-    min-width: 80px;
+    min-width: 72px;
+    padding: 0 12px;
+    font-size: 11px;
+  }
+
+  .ps-card {
+    padding: 16px 10px 14px;
+  }
+
+  .ps-card__title {
+    font-size: 17px;
+  }
+
+  .ps-card__text {
+    font-size: 14px;
+  }
+
+  .ps-intro {
+    font-size: 15px;
+  }
+
+  .ps-table {
+    font-size: 12px;
+  }
+
+  .ps-table th,
+  .ps-table td {
+    padding: 10px 12px;
   }
 }
 
@@ -1716,9 +1759,13 @@
   .ps-cards--7,
   .ps-cards--6,
   .ps-cards--5,
-  .ps-cards--areas,
   .ps-cards--3 {
     grid-template-columns: 1fr;
+  }
+
+  .ps-cards--areas .ps-card {
+    flex: 1 1 100%;
+    max-width: none;
   }
 
   .ps-cards--industry .ps-card {
@@ -1749,5 +1796,36 @@
 
   .ps-cards.ps-cards--startup {
     grid-template-columns: 1fr;
+  }
+
+  .ps-flow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .ps-flow li {
+    min-width: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .ps-flow li:not(:last-child)::after {
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -16px;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .ps-card__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .ps-card__icon svg,
+  .ps-card__icon img {
+    max-width: 64px;
+    max-height: 64px;
   }
 }

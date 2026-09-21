@@ -9,11 +9,17 @@
   --pc-ft-col-line: rgba(255, 255, 255, 0.15);
   --pc-ft-outline: rgba(255, 255, 255, 0.85);
   background-color: #000000;
-  background-image: url("../assets/images/footer-bg.png");
+  background-image: linear-gradient(180deg, #0a0a0a 0%, #000 55%, #111 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: var(--pc-ft-text);
+}
+
+@media (min-width: 992px) {
+  .pc-footer {
+    background-image: url("../assets/images/footer-bg.png");
+  }
 }
 
 .pc-footer a {
@@ -356,5 +362,41 @@ a.pc-footer__contact-text:hover {
   .pc-footer__col + .pc-footer__col {
     padding-top: 28px;
     border-top: 1px solid var(--pc-ft-row-line);
+  }
+}
+
+/* Floating consultation CTA */
+.float-consult {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 1040;
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.float-consult:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.34);
+}
+
+.float-consult img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 575.98px) {
+  .float-consult {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(12px, env(safe-area-inset-bottom));
+    width: 72px;
+    height: 72px;
   }
 }

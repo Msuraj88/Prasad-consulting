@@ -22,6 +22,7 @@
 
 .page-content.lead-page {
   padding-top: 0;
+  padding-bottom: 96px;
 }
 
 .lead-page p {
@@ -1121,5 +1122,36 @@
 
   .lead-director__name {
     font-size: 22px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .lead-d__grid,
+  .lead-achieve {
+    grid-template-columns: 1fr;
+  }
+
+  .lead-d__item {
+    border-right: none !important;
+  }
+
+  .lead-philo__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lead-section {
+    padding: 32px 0;
+  }
+
+  .lead-heading__title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .lead-section,
+  .about-acc {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 640px;
   }
 }

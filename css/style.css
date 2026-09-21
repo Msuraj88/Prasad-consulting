@@ -192,19 +192,12 @@ main > section.hero-section {
 .container-lg,
 .container-xl,
 .container-xxl {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
   padding-left: var(--site-gutter-x);
   padding-right: var(--site-gutter-x);
-}
-
-@media (min-width: 1200px) {
-  .container,
-  .container-sm,
-  .container-md,
-  .container-lg,
-  .container-xl,
-  .container-xxl {
-    max-width: var(--container-max-width);
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -228,12 +221,20 @@ main > section.hero-section {
    -------------------------------------------------------------------------- */
 .page-content {
   padding-top: 100px;
+  padding-bottom: 96px;
 }
 
 @media (min-width: 992px) {
   .page-content {
     padding-top: 120px;
+    padding-bottom: 112px;
   }
+}
+
+.about-acc__item,
+.ps-acc .about-acc__item,
+[id^="service-"] {
+  scroll-margin-top: 110px;
 }
 
 .page-banner {
