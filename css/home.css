@@ -60,6 +60,15 @@
   pointer-events: auto;
 }
 
+@media (max-width: 991.98px) {
+  .hero-poster__img {
+    aspect-ratio: 9 / 16;
+    max-height: 100svh;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Who We Are
    -------------------------------------------------------------------------- */
@@ -105,7 +114,7 @@
 .who-we-are__text {
   margin: 0 0 20px;
   color: var(--who-navy);
-  font-size: 23px;
+  font-size: 18px;
   line-height: 1.55;
 }
 
@@ -318,10 +327,7 @@
 }
 
 .domain-card__meta {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 16px;
+  display: none;
 }
 
 .domain-card__num {
@@ -349,6 +355,8 @@
 .domain-card__title {
   margin: 0;
   color: var(--sd-navy);
+  font-size: 18px;
+  line-height: 1.35;
 }
 
 .domain-card__title::after {
@@ -512,10 +520,6 @@
 @media (max-width: 575.98px) {
   .domain-card__body {
     padding: 14px 12px;
-  }
-
-  .domain-card__title {
-    font-size: 14px;
   }
 
   .domain-card__media {
@@ -1433,7 +1437,7 @@
 
 .partnerships__eyebrow {
   margin: 0;
-  color: var(--pt-green-accent);
+  color: #fff;
   font-size: medium;
 }
 
@@ -1451,12 +1455,12 @@
 }
 
 .partnerships__title-navy {
-  color: var(--pt-navy);
+  color: #fff;
   font-size: larger;
 }
 
 .partnerships__title-green {
-  color: var(--pt-green);
+  color: #fff;
   font-size: larger;
 }
 
@@ -1470,7 +1474,7 @@
 .partnerships__lead {
   margin: 0 0 28px;
   max-width: 680px;
-  color: var(--pt-text);
+  color: #fff;
   font-size: medium;
 }
 
@@ -1502,7 +1506,7 @@
 }
 
 .partnerships__item-label {
-  color: var(--pt-green-accent);
+  color: #fff;
   font-size: medium;
 }
 
@@ -1513,7 +1517,7 @@
 }
 
 .partnerships__item-desc {
-  color: var(--pt-text);
+  color: #fff;
   font-size: medium;
 }
 
@@ -1575,7 +1579,7 @@
 .partnerships__footer-text {
   flex-shrink: 0;
   margin: 0;
-  color: var(--pt-green-accent);
+  color: #fff;
   white-space: nowrap;
   font-size: medium;
 }

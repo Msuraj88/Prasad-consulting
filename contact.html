@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="unsafe-url">
   <meta name="description" content="Contact Prasad Consulting — Hyderabad, India">
   <title>Contact Us | Prasad Consulting</title>
   <link rel="icon" href="assets/fevicon.png" type="image/png">
@@ -48,10 +49,19 @@
             <ul class="contact-list">
               <li class="contact-list__item">
                 <span class="contact-list__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg>
+                </span>
+                <div>
+                  <p class="contact-list__primary">Prasad Consulting Hyd (India) Pvt. Ltd</p>
+                  <p class="contact-list__meta"># 38, GK Pearl Enclave<br>Yellareddyguda, Vemunguta<br>Kapra, Hyderabad - 500094</p>
+                </div>
+              </li>
+              <li class="contact-list__item">
+                <span class="contact-list__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none"><path d="M7.5 4.5h3.2l1.1 3.2-2 1.2a12.5 12.5 0 005.3 5.3l1.2-2 3.2 1.1v3.2a2 2 0 01-2.1 2A14.5 14.5 0 015.5 6.6a2 2 0 012-2.1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
                 </span>
                 <div>
-                  <a class="contact-list__primary" href="tel:+914012345678">+91 40 1234 5678</a>
+                  <a class="contact-list__primary" href="tel:+919550807031">+91 9550807031</a>
                   <p class="contact-list__meta">Mon – Fri, 9:00 AM – 6:00 PM</p>
                 </div>
               </li>
@@ -60,17 +70,8 @@
                   <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
                 <div>
-                  <a class="contact-list__primary" href="mailto:info@prasadconsulting.com">info@prasadconsulting.com</a>
-                  <p class="contact-list__meta">We’ll respond within 24 hours</p>
-                </div>
-              </li>
-              <li class="contact-list__item">
-                <span class="contact-list__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg>
-                </span>
-                <div>
-                  <p class="contact-list__primary">Hyderabad, Telangana, India</p>
-                  <p class="contact-list__meta">(Detailed address will be shared here)</p>
+                  <a class="contact-list__primary" href="mailto:info@prasadconsultinghydindia.com">info@prasadconsultinghydindia.com</a>
+                  <a class="contact-list__primary" href="mailto:ceo@prasadconsultinghydindia.com">ceo@prasadconsultinghydindia.com</a>
                 </div>
               </li>
             </ul>
@@ -98,32 +99,46 @@
               </div>
             </header>
 
-            <form class="contact-form" action="#" method="post" novalidate>
-              <div class="contact-form__row">
-                <div class="contact-field">
-                  <label for="name">Name <span aria-hidden="true">*</span></label>
-                  <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name">
+            <form class="contact-form" id="contact-form" action="https://formsubmit.co/info@prasadconsultinghydindia.com" method="post">
+              <div class="contact-form__fields">
+                <p class="contact-form__honey">
+                  <label for="contact-company">Company</label>
+                  <input type="text" id="contact-company" name="_honey" tabindex="-1" autocomplete="off">
+                </p>
+                <div class="contact-form__row">
+                  <div class="contact-field">
+                    <label for="name">Name <span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required autocomplete="name">
+                  </div>
+                  <div class="contact-field">
+                    <label for="email">Email <span aria-hidden="true">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
+                  </div>
                 </div>
+
                 <div class="contact-field">
-                  <label for="email">Email <span aria-hidden="true">*</span></label>
-                  <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel">
                 </div>
+
+                <div class="contact-field">
+                  <label for="message">Message <span aria-hidden="true">*</span></label>
+                  <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+
+                <p class="contact-form__status" id="contact-form-status" role="alert" hidden></p>
+
+                <button type="submit" class="contact-form__submit">
+                  Send Message
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
               </div>
 
-              <div class="contact-field">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel">
+              <div class="contact-form__success" id="contact-form-success" hidden>
+                <p class="contact-form__success-title">Message sent</p>
+                <p id="contact-form-success-text">Thank you. Your message has been delivered. We’ll get back to you soon.</p>
+                <button type="button" class="contact-form__again" id="contact-form-again">Send another message</button>
               </div>
-
-              <div class="contact-field">
-                <label for="message">Message <span aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
-              </div>
-
-              <button type="submit" class="contact-form__submit">
-                Send Message
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </button>
             </form>
           </div>
 
@@ -137,5 +152,6 @@
 
   <script src="js/include.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/contact.js" defer></script>
 </body>
 </html>

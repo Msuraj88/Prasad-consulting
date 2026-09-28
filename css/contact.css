@@ -318,6 +318,65 @@ a.contact-list__primary:hover {
   outline-offset: 3px;
 }
 
+.contact-form__submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+}
+
+.contact-form__honey {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-form__status {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #fdecee;
+  color: #8a1f32;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.contact-form__success {
+  padding: 8px 0 4px;
+}
+
+.contact-form__success-title {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ct-navy);
+}
+
+.contact-form__success p {
+  margin: 0 0 18px;
+  color: var(--ct-text);
+  line-height: 1.5;
+}
+
+.contact-form__again {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 18px;
+  border: 1px solid var(--ct-maroon);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ct-maroon);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form__again:hover {
+  background: var(--ct-soft);
+}
+
 /* --------------------------------------------------------------------------
    Responsive
    -------------------------------------------------------------------------- */

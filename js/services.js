@@ -173,6 +173,40 @@
       "</div>";
   }
 
+  function isMobileServices() {
+    return window.matchMedia("(max-width: 767.98px)").matches;
+  }
+
+  /* Phone only: domain overview sits above the sub-tabs.
+     A selected sub-tab’s detail sits directly under that row. */
+  function placeDetail() {
+    var panel = document.querySelector(".svc-panel");
+    if (!panel || !state.detailEl) return;
+
+    var host = document.getElementById("svcDetailHost");
+    var mobile = isMobileServices();
+
+    if (!mobile || state.sub < 0) {
+      if (state.detailEl.parentElement !== panel) panel.appendChild(state.detailEl);
+      if (host) host.remove();
+      panel.classList.toggle("is-overview", mobile && state.sub < 0);
+      return;
+    }
+
+    var btn = state.subTabs[state.sub];
+    var li = btn && btn.parentElement;
+    if (!li) return;
+
+    if (!host) {
+      host = document.createElement("li");
+      host.id = "svcDetailHost";
+      host.className = "svc-inline-detail";
+    }
+    li.insertAdjacentElement("afterend", host);
+    host.appendChild(state.detailEl);
+    panel.classList.remove("is-overview");
+  }
+
   function selectSub(index) {
     var domain = SERVICES[state.domain];
     if (!domain || !domain.subs[index]) return;
@@ -185,6 +219,14 @@
     });
 
     renderDetail(domain, domain.subs[index]);
+    placeDetail();
+
+    if (isMobileServices()) {
+      var row = state.subTabs[index];
+      if (row && row.scrollIntoView) {
+        row.scrollIntoView({ block: "start", behavior: "smooth" });
+      }
+    }
   }
 
   function renderSubTabs(domain) {
@@ -250,6 +292,7 @@
     renderSubTabs(domain);
     state.sub = -1;
     renderDomainOverview(domain);
+    placeDetail();
     scrollActiveTabIntoView(index);
 
     if (updateHash && window.history && window.history.replaceState) {
@@ -304,6 +347,13 @@
     window.addEventListener("hashchange", function () {
       selectDomain(indexFromHash(), false);
     });
+
+    var mobileMq = window.matchMedia("(max-width: 767.98px)");
+    function onViewport() {
+      placeDetail();
+    }
+    if (mobileMq.addEventListener) mobileMq.addEventListener("change", onViewport);
+    else if (mobileMq.addListener) mobileMq.addListener(onViewport);
   }
 
   if (document.readyState === "loading") {

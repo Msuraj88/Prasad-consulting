@@ -396,9 +396,9 @@
   line-height: 1.85;
 }
 
-/* Two equal images side by side */
+/* Two equal images side by side — hidden until real images replace the placeholders */
 .svc-detail__media {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
 }
@@ -596,6 +596,27 @@
 }
 
 @media (max-width: 767.98px) {
+  /* Domain overview first, then the sub-tab list */
+  .svc-panel.is-overview {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .svc-panel.is-overview .svc-panel__content {
+    order: -1;
+  }
+
+  /* Selected sub-tab detail sits directly under that row */
+  .svc-inline-detail {
+    list-style: none;
+    margin: 2px 0 0;
+    padding: 0;
+  }
+
+  .svc-inline-detail .svc-panel__content {
+    padding: 14px 2px 6px;
+  }
+
   /* Stack the two images and the three columns */
   .svc-detail__media {
     grid-template-columns: 1fr;
@@ -633,6 +654,7 @@
 
   .svc-subtab {
     padding: 12px 14px;
+    scroll-margin-top: 110px;
   }
 
   .svc-panel__cta {

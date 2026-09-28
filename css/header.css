@@ -304,6 +304,10 @@ a {
   flex: 0 0 auto;
 }
 
+.header-nav__item--later {
+  display: none;
+}
+
 @media (max-width: 1199.98px) {
   .header-nav.is-open {
     display: flex;
@@ -525,16 +529,7 @@ a {
 }
 
 .header-nav__mega-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  background: rgba(139, 34, 82, 0.07);
-  color: var(--maroon);
-  transition: background var(--transition), color var(--transition);
+  display: none;
 }
 
 .header-nav__mega-icon svg {

@@ -6,7 +6,7 @@
   "use strict";
 
   var DESKTOP = "assets/images/hero-video.mp4";
-  var MOBILE = "assets/images/hero-video-mobile.mp4";
+  var MOBILE = "assets/images/hero-mobile-vid.mp4";
   var MOBILE_MQ = "(max-width: 991.98px)";
 
   function prefersLite() {
@@ -65,7 +65,7 @@
     }
 
     video.addEventListener("playing", onReady);
-    video.addEventListener("canplay", onReady);
+    if (src !== MOBILE) video.addEventListener("canplay", onReady);
 
     var playPromise = video.play();
     if (playPromise && typeof playPromise.catch === "function") {
