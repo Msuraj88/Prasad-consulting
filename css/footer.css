@@ -243,8 +243,14 @@
   transition: opacity 0.2s ease;
 }
 
-a.pc-footer__contact-text:hover {
+a.pc-footer__contact-text:hover,
+.pc-footer__contact-text a:hover {
   opacity: 0.8;
+}
+
+.pc-footer__contact-text a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .pc-footer__contact-item--address .pc-footer__contact-text {

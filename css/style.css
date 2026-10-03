@@ -233,7 +233,8 @@ main > section.hero-section {
 
 .about-acc__item,
 .ps-acc .about-acc__item,
-[id^="service-"] {
+[id^="service-"],
+#our-gallery {
   scroll-margin-top: 110px;
 }
 

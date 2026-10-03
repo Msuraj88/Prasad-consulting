@@ -68,7 +68,7 @@ window.SITE_PARTIALS = {
             </li>
             <li><a href="partnerships.html" class="header-nav__link" data-nav="partnerships">Partnerships</a></li>
             <li class="header-nav__item--later"><a href="#" class="header-nav__link">Clients</a></li>
-            <li><a href="#" class="header-nav__link">Gallery</a></li>
+            <li><a href="index.html#our-gallery" class="header-nav__link" data-nav="gallery">Gallery</a></li>
             <li><a href="#" class="header-nav__link">Credentials &amp; Recognitions</a></li>
             <li class="header-nav__item--later"><a href="#" class="header-nav__link">News &amp; Updates</a></li>
             <li class="header-nav__item--later"><a href="#" class="header-nav__link">Technical Publications</a></li>
@@ -134,7 +134,10 @@ window.SITE_PARTIALS = {
             <span class="pc-footer__contact-icon" aria-hidden="true">
               <svg viewBox="0 0 20 20" fill="none"><path d="M6 4h3l1 3-2 1a9 9 0 004 4l1-2 3 1v3a2 2 0 01-2 2C8.5 16 4 11.5 4 6a2 2 0 012-2z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
             </span>
-            <a href="tel:+919550807031" class="pc-footer__contact-text">+91 9550807031</a>
+            <span class="pc-footer__contact-text">
+              <a href="tel:+919550807031">+91 9550807031</a>,
+              <a href="tel:+919663835240">+91 9663835240</a>
+            </span>
           </li>
           <li class="pc-footer__contact-item">
             <span class="pc-footer__contact-icon" aria-hidden="true">
@@ -183,7 +186,7 @@ window.SITE_PARTIALS = {
             </a>
           </li>
           <li>
-            <a href="#" class="pc-footer__row">
+            <a href="index.html#our-gallery" class="pc-footer__row">
               <svg class="pc-footer__row-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="4" y="5" width="12" height="10" rx="1.2" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="9" r="1.2" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 14l3.5-3 2.5 2 2-1.5 3 2.5" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
               <span class="pc-footer__row-label">Gallery</span>
               <svg class="pc-footer__row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 11L11 5M11 5H6M11 5V10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -234,13 +237,13 @@ window.SITE_PARTIALS = {
       <section class="pc-footer__col pc-footer__col--social" aria-labelledby="pc-footer-social-heading">
         <h2 class="pc-footer__heading" id="pc-footer-social-heading">Follow Us</h2>
         <div class="pc-footer__social">
-          <a href="https://in.linkedin.com/company/prasad-consulting-hyd-india-private-limited" class="pc-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/commander-prasad-yvv-in-sr-veteran-b39ab020/" class="pc-footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 11v7M8 8v.01M12 18v-5.5a2.5 2.5 0 015 0V18M5 5h14v14H5V5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href="https://www.youtube.com/@PrasadConsultinghyd" class="pc-footer__social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="7" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M11 10l4 2-4 2v-4z" fill="currentColor"/></svg>
           </a>
-          <a href="https://wa.me/919550807031" class="pc-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/919663835240" class="pc-footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4.5a7.2 7.2 0 00-6.2 10.9L5 19.5l4.2-.9A7.2 7.2 0 1012 4.5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M9.2 10.4c.2 1.5 1.4 2.9 2.9 3.3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
           </a>
         </div>
